@@ -1,13 +1,17 @@
-name: .NET
+name: CI for POI
 
 on:
   workflow_dispatch:
   push:
     branches: 
     - poi 
+    paths:
+    - apis/poi/**
   pull_request:
     branches: 
     - master 
+    paths:
+    - apis/poi/**
 
 jobs:
   build:
