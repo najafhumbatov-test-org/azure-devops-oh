@@ -3,9 +3,11 @@ name: .NET
 on:
   workflow_dispatch:
   push:
-    branches: [ poi ]
+    branches: 
+    - poi 
   pull_request:
-    branches: [ master ]
+    branches: 
+    - master 
 
 jobs:
   build:
