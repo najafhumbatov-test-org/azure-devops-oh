@@ -5,7 +5,7 @@ on:
   push:
     branches: 
     - master 
-    - poi
+    - features/poi
   pull_request:
     branches: 
     - master 
