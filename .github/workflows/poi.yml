@@ -23,6 +23,6 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore apis/poi/*.sln
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore apis/poi/web/poi.csproj
     - name: Test
       run: dotnet test --no-build --verbosity normal
