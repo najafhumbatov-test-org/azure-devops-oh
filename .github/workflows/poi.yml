@@ -25,4 +25,4 @@ jobs:
     - name: Build
       run: dotnet build --no-restore apis/poi/web/poi.csproj
     - name: Test
-      run: dotnet test --no-build --verbosity normal apis/poi/IntegrationTests/IntegrationTests.csproj
+      run: dotnet test --no-build --no-restore --verbosity normal apis/poi/IntegrationTests/IntegrationTests.csproj
