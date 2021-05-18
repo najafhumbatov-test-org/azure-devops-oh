@@ -11,18 +11,25 @@ on:
 
 jobs:
   build:
-
-
-
+    runs-on: ubuntu-latest
+    
     steps:
     - uses: actions/checkout@v2
-    - name: Setup .NET
+    - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.202
+
+    - name: Add Code coverage tools
+      working-directory: apis/poi/tests/UnitTests
+      run: dotnet add package coverlet.msbuild
+      
     - name: Restore dependencies
-      run: dotnet restore apis/poi/poi.sln
-    - name: Build
-      run: dotnet build --no-restore apis/poi/web/poi.csproj
-    - name: Test
-      run: dotnet test --no-build --no-restore --verbosity normal apis/poi/poi.sln
+      run: dotnet restore apis/poi/web/*.csproj
+      
+    - name: Build Web
+      run: dotnet build --configuration Release --no-restore apis/poi/web/poi.csproj
+    - name: Build Unit Test
+      run: dotnet build --configuration Release --verbosity normal apis/poi/tests/UnitTests/UnitTests.csproj
+    - name: Test dotnet
+      run: dotnet test --no-restore --verbosity normal apis/poi/tests/UnitTests
