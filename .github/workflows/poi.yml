@@ -6,6 +6,8 @@ on:
     branches: 
     - master 
     - features/poi
+    paths:
+    - apis/poi
   pull_request:
     branches: [ master ]
 
