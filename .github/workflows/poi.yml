@@ -20,9 +20,7 @@ jobs:
       with:
         dotnet-version: 3.1.202
 
-    - name: Add Code coverage tools
-      working-directory: apis/poi/tests/UnitTests
-      run: dotnet add package coverlet.msbuild
+
       
     - name: Restore dependencies
       run: dotnet restore apis/poi/web/*.csproj
