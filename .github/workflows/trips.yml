@@ -7,7 +7,7 @@ on:
     - features/trips
     paths:
     - apis/trips/**
-    - apis/trips/go.yml
+    - .github/workflows/trips.yml
   pull_request:
     branches: [ master ]
 
