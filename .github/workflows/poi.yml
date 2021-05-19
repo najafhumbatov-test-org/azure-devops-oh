@@ -1,4 +1,4 @@
-name: .NET
+name: POI .Net CI
 
 on:
   workflow_dispatch:
