@@ -31,5 +31,8 @@ jobs:
       run: dotnet build --configuration Release --verbosity normal apis/poi/tests/UnitTests/UnitTests.csproj
     - name: Build Integration Test
       run: dotnet build --configuration Release --verbosity normal apis/poi/tests/IntegrationTests/IntegrationTests.csproj
-    - name: Test dotnet
+    - name: Test dotnet unit
       run: dotnet test --no-restore --verbosity normal apis/poi/tests/UnitTests
+      
+    - name: Test dotnet integration
+      run: dotnet test --no-restore --verbosity normal apis/poi/tests/İntegrationTests
