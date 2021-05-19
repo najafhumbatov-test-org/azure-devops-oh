@@ -35,4 +35,4 @@ jobs:
       run: dotnet test --no-restore --verbosity normal apis/poi/tests/UnitTests
       
     - name: Test dotnet integration
-      run: dotnet test --no-restore --verbosity normal apis/poi/tests/İntegrationTests
+      run: dotnet test --no-restore --verbosity normal apis/poi/tests/IntegrationTests
